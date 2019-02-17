@@ -75,6 +75,7 @@ class GameContainer extends Component {
       newfactories.push(newfactory);
     });
     this.setState({
+      coins: this.state.coins,
       factories: newfactories
     })
   }
@@ -88,7 +89,7 @@ class GameContainer extends Component {
     return (
       <div className="gamecontainer">
         <CoinCounter count={this.state.coins} />
-        <FactoriesContainer factories={this.state.factories} />
+        <FactoriesContainer coins={this.state.coins} factories={this.state.factories} />
       </div>
     );
   }
