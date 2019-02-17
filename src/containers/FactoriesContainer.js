@@ -19,6 +19,7 @@ class FactoriesContainer extends Component {
         <FactoryView factory={this.state.factories[2]}/>
         <FactoryView factory={this.state.factories[3]}/>
         <FactoryView factory={this.state.factories[4]}/>
+        <FactoryView factory={this.state.factories[5]}/>
       </div>
     );
   }
