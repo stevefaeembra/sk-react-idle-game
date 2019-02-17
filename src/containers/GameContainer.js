@@ -15,7 +15,7 @@ class GameContainer extends Component {
           baseCost: 0,
           name: "Autoclick",
           cps: 1,
-          count: 1,
+          count: 100,
         },
         {
           baseCost: 10,
@@ -43,6 +43,24 @@ class GameContainer extends Component {
         }
       ]
     }
+
+    this.everyGameTick = this.everyGameTick.bind(this);
+  }
+
+  everyGameTick() {
+    let cps = 0;
+    this.state.factories.forEach((factory) => {
+      cps += factory.cps * factory.count;
+    })
+    this.setState({
+      cps : cps,
+      coins : this.state.coins + cps
+    });
+  }
+
+  componentDidMount() {
+    console.log("ComponentDidMount()");
+    setInterval(this.everyGameTick, 1000);
   }
 
   render() {
