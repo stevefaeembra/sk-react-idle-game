@@ -71,6 +71,22 @@ class GameContainer extends Component {
   buyOne(factoryName) {
     // buy one of named factory
     console.log(`bought a ${factoryName}`);
+    let newfactories = [];
+    let purchaseCost = 0;
+    this.state.factories.forEach((factory) => {
+      if (factory.name !== factoryName) {
+        newfactories.push(factory);
+      }
+      else {
+        factory.count += 1;
+        purchaseCost = factory.costOne;
+        newfactories.push(factory);
+      }
+    });
+    this.setState({
+      factories: newfactories,
+      coins: this.state.coins - purchaseCost
+    })
   }
 
   autoBuy() {
