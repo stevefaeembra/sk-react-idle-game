@@ -21,25 +21,25 @@ class GameContainer extends Component {
           baseCost: 10,
           name: "Peasant",
           cps: 2,
-          count: 0,
+          count: 56,
         },
         {
           baseCost: 500,
           name: "Farmer",
           cps: 8,
-          count: 0,
+          count: 24,
         },
         {
           baseCost: 10000,
           name: "Yeoman",
           cps: 32,
-          count: 0
+          count: 7
         },
         {
           baseCost: 100000,
           name: "IronSmith",
           cps: 128,
-          count: 0
+          count: 1
         }
       ]
     }
