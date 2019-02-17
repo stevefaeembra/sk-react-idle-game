@@ -8,6 +8,7 @@
 html {
   font-size: 16px;
   background-color: wheat;
+  font-family: 'Raleway', sans-serif;
 }
 
 h1 {
@@ -36,7 +37,8 @@ h1 {
 }
 
 .factoryview-name,
-.factoryview-count {
+.factoryview-count,
+.factoryview-buyone {
   font-size: 2rem;
 }
 

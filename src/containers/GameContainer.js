@@ -56,9 +56,9 @@ class GameContainer extends Component {
           count: 0
         },
         {
-          baseCost: 8000000,
+          baseCost: 80000000,
           name: "Lord",
-          cps: 10000000,
+          cps: 100000000,
           count: 0
         }
       ]
@@ -95,8 +95,9 @@ class GameContainer extends Component {
       return factory.costOne <= this.state.coins;
     });
     let buythis = _.sample(affordable);
-    console.log(`Gonna buy a ${buythis}`);
-    this.buyOne(buythis.name);
+    if (buythis) {
+      this.buyOne(buythis.name);
+    }
   }
 
   everyGameTick() {
@@ -125,7 +126,7 @@ class GameContainer extends Component {
     });
 
     // auto-buy?
-    if (Math.random() > .99) {
+    if (Math.random() > .95) {
       this.autoBuy();
     }
   }

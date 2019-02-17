@@ -6,7 +6,7 @@ class CoinCounter extends Component {
   render() {
     return (
       <div className="coincounter">
-        <h1>{parseInt(this.props.count)} coins</h1>
+        <h1>{parseInt(this.props.count)}</h1>
         <hr></hr>
       </div>
     );
