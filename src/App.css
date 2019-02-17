@@ -11,6 +11,7 @@ html {
 }
 
 .factoryview {
+  background-color: gray;
   margin: .5rem;
   padding: .5rem;
   border: 1px solid black;
