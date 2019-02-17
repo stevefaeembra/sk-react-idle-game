@@ -19,33 +19,33 @@ class GameContainer extends Component {
           count: 1000,
         },
         {
-          baseCost: 10,
+          baseCost: 3,
           name: "Peasant",
-          cps: 2,
-          count: 560,
+          cps: 10,
+          count: 160,
         },
         {
           baseCost: 500,
           name: "Farmer",
-          cps: 8,
+          cps: 100,
           count: 24,
         },
         {
           baseCost: 10000,
           name: "Yeoman",
-          cps: 32,
+          cps: 1000,
           count: 70
         },
         {
           baseCost: 100000,
           name: "IronSmith",
-          cps: 128,
+          cps: 10000,
           count: 10
         },
         {
           baseCost: 500000,
           name: "SilverSmith",
-          cps: 1024,
+          cps: 100000,
           count: 3
         },
       ]
@@ -66,7 +66,7 @@ class GameContainer extends Component {
     });
 
     // update factory costs using exponential formulae
-    
+
     let newfactories = []
     this.state.factories.forEach((factory) => {
       let costOne = factory.baseCost * (1.15 ** factory.count);
