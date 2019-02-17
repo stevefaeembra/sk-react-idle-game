@@ -16,37 +16,37 @@ class GameContainer extends Component {
           baseCost: 0,
           name: "Autoclick",
           cps: 1,
-          count: 1000,
+          count: 10,
         },
         {
           baseCost: 3,
           name: "Peasant",
           cps: 10,
-          count: 160,
+          count: 8
         },
         {
           baseCost: 500,
           name: "Farmer",
           cps: 100,
-          count: 24,
+          count: 2,
         },
         {
           baseCost: 10000,
           name: "Yeoman",
           cps: 1000,
-          count: 70
+          count: 0
         },
         {
           baseCost: 100000,
           name: "IronSmith",
           cps: 10000,
-          count: 10
+          count: 0
         },
         {
           baseCost: 500000,
           name: "SilverSmith",
           cps: 100000,
-          count: 3
+          count: 0
         },
       ]
     }

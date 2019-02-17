@@ -8,7 +8,7 @@ class FactoryView extends Component {
       <div className="factoryview">
         <div className="factoryview-count">{this.props.factory.count}</div>
         <div className="factoryview-name">{this.props.factory.name}</div>
-        <div className="factoryview-buyone">£{this.props.factory.costOne}</div>
+        <div className="factoryview-buyone">£{parseInt(this.props.factory.costOne)}</div>
         <div className="factoryview-cps">{this.props.factory.cps * this.props.factory.count} cps</div>
         <hr></hr>
       </div>
