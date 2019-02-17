@@ -10,7 +10,7 @@ class GameContainer extends Component {
     this.fps = 20; // frames per second
     this.state = {
       coins: 1,
-      coinsPerSecond: 1,
+      cps: 1,
       factories: [
         {
           baseCost: 0,
@@ -73,7 +73,7 @@ class GameContainer extends Component {
       cps += parseInt((factory.cps * factory.count)/this.fps);
     })
     this.setState({
-      cps : cps,
+      cps : parseInt(cps*this.fps),
       coins : this.state.coins + cps
     });
 
