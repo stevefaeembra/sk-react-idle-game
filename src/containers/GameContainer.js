@@ -64,6 +64,17 @@ class GameContainer extends Component {
     }
 
     this.everyGameTick = this.everyGameTick.bind(this);
+    this.autoBuy = this.autoBuy.bind(this);
+  }
+
+  autoBuy() {
+    debugger;
+    // buy an affordable factory at random
+    let affordable = this.state.factories.filter((factory) => {
+      return factory.costOne <= this.state.coins;
+    });
+    console.log("Can afford");
+    console.dir(affordable);
   }
 
   everyGameTick() {
@@ -89,7 +100,12 @@ class GameContainer extends Component {
     this.setState({
       coins: this.state.coins,
       factories: newfactories
-    })
+    });
+
+    // auto-buy?
+    if (Math.random() > .999) {
+      this.autoBuy();
+    }
   }
 
   componentDidMount() {
