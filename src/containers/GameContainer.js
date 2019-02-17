@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../App.css';
 import CoinCounter from '../components/CoinCounter.js';
 import FactoriesContainer from './FactoriesContainer.js';
+import _ from 'lodash';
 
 class GameContainer extends Component {
 
@@ -67,14 +68,19 @@ class GameContainer extends Component {
     this.autoBuy = this.autoBuy.bind(this);
   }
 
+  buyOne(factoryName) {
+    // buy one of named factory
+    console.log(`bought a ${factoryName}`);
+  }
+
   autoBuy() {
-    debugger;
     // buy an affordable factory at random
     let affordable = this.state.factories.filter((factory) => {
       return factory.costOne <= this.state.coins;
     });
-    console.log("Can afford");
-    console.dir(affordable);
+    let buythis = _.sample(affordable);
+    console.log(`Gonna buy a ${buythis}`);
+    this.buyOne(buythis.name);
   }
 
   everyGameTick() {
@@ -103,7 +109,7 @@ class GameContainer extends Component {
     });
 
     // auto-buy?
-    if (Math.random() > .999) {
+    if (Math.random() > .99) {
       this.autoBuy();
     }
   }
