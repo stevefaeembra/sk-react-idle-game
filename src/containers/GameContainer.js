@@ -13,34 +13,34 @@ class GameContainer extends Component {
       cps: 1,
       factories: [
         {
-          baseCost: 0,
+          baseCost: 1,
           name: "Autoclick",
           cps: 1,
-          count: 1,
+          count: 20,
         },
         {
           baseCost: 3,
           name: "Peasant",
           cps: 10,
-          count: 45
+          count: 0
         },
         {
           baseCost: 500,
           name: "Farmer",
           cps: 100,
-          count: 12,
+          count: 0
         },
         {
           baseCost: 10000,
           name: "Yeoman",
           cps: 1000,
-          count: 3
+          count: 0
         },
         {
           baseCost: 100000,
           name: "IronSmith",
           cps: 10000,
-          count: 1
+          count: 0
         },
         {
           baseCost: 500000,
