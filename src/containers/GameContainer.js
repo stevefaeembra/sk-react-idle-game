@@ -7,6 +7,7 @@ class GameContainer extends Component {
 
   constructor(props) {
     super(props);
+    this.fps = 20;
     this.state = {
       coins: 1,
       coinsPerSecond: 1,
@@ -50,7 +51,7 @@ class GameContainer extends Component {
   everyGameTick() {
     let cps = 0;
     this.state.factories.forEach((factory) => {
-      cps += factory.cps * factory.count;
+      cps += parseInt((factory.cps * factory.count)/this.fps);
     })
     this.setState({
       cps : cps,
@@ -60,7 +61,7 @@ class GameContainer extends Component {
 
   componentDidMount() {
     console.log("ComponentDidMount()");
-    setInterval(this.everyGameTick, 1000);
+    setInterval(this.everyGameTick, 1000/this.fps);
   }
 
   render() {
